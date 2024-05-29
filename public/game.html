@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Town of Salem</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="game">
+        <h1>LETHAL CHALLENGES</h1>
+          <div id="content">
+            <div id="main">
+                <div id="join">
+                    <input type="text" id="name" placeholder="Enter your name">
+                    <button onclick="joinGame()">Join Game</button>
+                </div>
+                <div id="waiting" style="display: none;">
+                    <h2>Waiting for Game Master to Start the Game...</h2>
+                </div>
+                <div id="role" style="display: none;">
+                    <h2 class="roleName" id="roleName"></h2>
+                    <p class="roleDescription" id="roleDescription"></p>
+                    <div id="gamemaster-reroll" style="display: none;">
+                        <button onclick="reroll()">Reroll Roles</button>
+                    </div>
+                </div>
+                <div id="gamemaster" style="display: none;">
+                    <button onclick="startGame()">Start Game</button>
+                </div>
+            </div>
+            <div id="lobby">
+                <h2>Lobby List</h2>
+                <div id="playersList"></div>
+            </div>
+        </div>
+    </div>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="client.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            fetch('/isAuthenticated')
+                .then(response => response.json())
+                .then(data => {
+                    if (data.isAuthenticated) {
+                        document.getElementById('gamemaster').style.display = 'block';
+                    }
+                });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,262 @@
+body {
+    font-family: 'Courier New;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: black;
+    color: #cc4125;
+    height: 40vh;
+  
+}
+
+#game {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-grow: 1;
+    justify-content: center; /* Center content vertically */
+}
+
+#content {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    align-items: flex-start;
+    position: relative; /* For absolute positioning of lobby */
+}
+
+#main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* Center content vertically */
+    flex-grow: 1;
+    max-width: 800px;
+    text-align: center; /* Center text within main */
+}
+
+#lobby {
+    position: absolute;
+    right: 200px; /* Adjust this value to move the lobby left */
+    top: 100px;
+    text-align: center;
+    border-left: 1px solid #cc4125;
+    padding: 20px;
+    max-width: 200px;
+    margin: 20px; /* Ensure some margin from the edges */
+}
+
+#name, input[type="text"], input[type="password"] {
+    padding: 10px;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+button {
+    padding: 3px 6px;
+    font-size: 12px;
+    margin-top: 3px;
+}
+
+#error {
+    color: red;
+    margin-bottom: 20px;
+}
+
+#role {
+    margin-top: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#playersList p {
+    margin: 5px 0;
+}
+
+#playersList .player {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 5px 0;
+}
+
+#playersList .player-name {
+    margin-right: 10px; /* Add padding between name and dropdown */
+}
+
+#playersList select, #playersList button {
+    margin-left: 10px; /* Ensure dropdown and button have spacing */
+}
+
+#playersList .score {
+    margin-right: 10px; /* Add padding between score and name */
+    font-weight: bold;
+}
+
+#playersList .empty-space {
+    width: 200px; /* Adjust width to match the space taken by the dropdown and button */
+}
+
+/* Custom styles for role names and descriptions */
+.roleName {
+    font-size: 48px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.roleDescription {
+    margin-top: 10px;
+    width: 600px;
+    border: 2px solid #cc4125;
+    padding: 10px;
+    word-wrap: break-word;
+    font-size: 32px;
+    text-align: center; /* Center the text within the description */
+}
+
+.roleName.SEE_NO_EVIL, .roleDescription.SEE_NO_EVIL {
+    color: #ff6666; /* Example color */
+    border-color: #ff6666;
+}
+
+.roleName.WILDLIFE_SPECIALIST, .roleDescription.WILDLIFE_SPECIALIST {
+    color: #76a5af; /* Example color */
+    border-color: #76a5af;
+}
+
+.roleName.PYROTECHNICS, .roleDescription.PYROTECHNICS {
+    color: #ff9900; /* Example color */
+    border-color: #ff9900;
+}
+
+.roleName.SCARED_STRAIGHT, .roleDescription.SCARED_STRAIGHT {
+    color: #8e7cc3; /* Example color */
+    border-color: #8e7cc3;
+}
+
+.roleName.BULL_RUNNER, .roleDescription.BULL_RUNNER {
+    color: #e06666; /* Example color */
+    border-color: #e06666;
+}
+
+.roleName.RESIDENT_JOKESTER, .roleDescription.RESIDENT_JOKESTER {
+    color: #f1c232; /* Example color */
+    border-color: #f1c232;
+}
+
+.roleName.SABOTAGE, .roleDescription.SABOTAGE {
+    color: #cc0000; /* Example color */
+    border-color: #cc0000;
+}
+
+.roleName.EAGER_TO_LEAVE, .roleDescription.EAGER_TO_LEAVE {
+    color: #f4cccc; /* Example color */
+    border-color: #f4cccc;
+}
+
+.roleName.UNQUALIFIED, .roleDescription.UNQUALIFIED {
+    color: #9fc5e8; /* Example color */
+    border-color: #9fc5e8;
+}
+
+.roleName.IMPULSE_CONTROL, .roleDescription.IMPULSE_CONTROL {
+    color: #f1c232; /* Example color */
+    border-color: #f1c232;
+}
+
+.roleName.SENTIMENTALITY, .roleDescription.SENTIMENTALITY {
+    color: #6aa84f; /* Example color */
+    border-color: #6aa84f;
+}
+
+.roleName.DANCING_WITH_DEATH, .roleDescription.DANCING_WITH_DEATH {
+    color: #674ea7; /* Example color */
+    border-color: #674ea7;
+}
+
+.roleName.PRIVATE_INVESTIGATION, .roleDescription.PRIVATE_INVESTIGATION {
+    color: #45818e; /* Example color */
+    border-color: #45818e;
+}
+
+.roleName.PACIFIST, .roleDescription.PACIFIST {
+    color: #6aa84f; /* Example color */
+    border-color: #6aa84f;
+}
+
+.roleName.SAVIOR, .roleDescription.SAVIOR {
+    color: #ffd966; /* Example color */
+    border-color: #ffd966;
+}
+
+.roleName.SCAREDY_CAT, .roleDescription.SCAREDY_CAT {
+    color: #8e7cc3; /* Example color */
+    border-color: #8e7cc3;
+}
+
+.roleName.DAREDEVIL, .roleDescription.DAREDEVIL {
+    color: #cc0000; /* Example color */
+    border-color: #cc0000;
+}
+
+.roleName.NEW_HIRE, .roleDescription.NEW_HIRE {
+    color: 	#b6d7a8; /* Example color */
+    border-color: #b6d7a8;
+}
+
+.roleName.GULLIBLE, .roleDescription.GULLIBLE {
+    color: #e69138; /* Example color */
+    border-color: #e69138;
+}
+
+.roleName.STONE_FACED, .roleDescription.STONE_FACED {
+    color: #76a5af; /* Example color */
+    border-color: #76a5af;
+}
+
+.roleName.ACROPHOBIA, .roleDescription.ACROPHOBIA {
+    color: #cfe2f3 ; /* Example color */
+    border-color: #cfe2f3;
+}
+
+.roleName.WEAK_ARMED, .roleDescription.WEAK_ARMED {
+    color: 	#93c47d; /* Example color */
+    border-color: 	#93c47d;
+}
+
+.roleName.MUSE, .roleDescription.MUSE {
+    color: #990000 ; /* Example color */
+    border-color: #990000;
+}
+
+.roleName.ENERGY_CONSERVATION, .roleDescription.ENERGY_CONSERVATION {
+    color: #6aa84f; /* Example color */
+    border-color: #6aa84f
+}
+
+.roleName.FINDERS_KEEPERS, .roleDescription.FINDERS_KEEPERS {
+    color: #f6b26b; /* Example color */
+    border-color: #f6b26b;
+}
+
+.roleName.LONE_WOLF, .roleDescription.LONE_WOLF {
+    color: #45818e; /* Example color */
+    border-color: #45818e;
+}
+
+.roleName.NO_MERCY, .roleDescription.NO_MERCY {
+    color: #cc0000; /* Example color */
+    border-color: #cc0000;
+}
+
+.roleName.DONATIONS, .roleDescription.DONATIONS {
+    color: #f1c232; /* Example color */
+    border-color: #f1c232;
+}
