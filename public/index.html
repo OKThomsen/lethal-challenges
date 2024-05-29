@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Town of Salem</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="game">
+        <h1>Town of Salem</h1>
+        <div id="join">
+            <input type="text" id="name" placeholder="Enter your name">
+            <button onclick="joinGame()">Join Game</button>
+        </div>
+        <div id="waiting" style="display: none;">
+            <h2>Waiting for Game Master to Start the Game...</h2>
+            <div id="players"></div>
+        </div>
+        <div id="role" style="display: none;">
+            <h2>Your Role</h2>
+            <p id="roleName"></p>
+            <p id="roleDescription"></p>
+        </div>
+        <div id="gamemaster" style="display: none;">
+            <button onclick="startGame()">Start Game</button>
+        </div>
+    </div>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="client.js"></script>
+</body>
+</html>
